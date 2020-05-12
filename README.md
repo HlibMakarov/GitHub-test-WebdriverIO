@@ -10,6 +10,15 @@ GitHub-test-WebdriverIO/test/
 
 2.Test case Sroll to down registration fields with random data
 
-3.Test main functionality (Create project, repo, add column, delete project, delete repo)
+3.Test case full dropdownlist menu
 
-4.Test Main page
+4.Test case open tabs 
+
+5.Test case main functionality (Create project, repo, add column, delete project, delete repo)
+
+6.Test case forgot password field
+
+7.Test Main page move mouse to flash menu
+
+8.Test case pricing Free account
+
