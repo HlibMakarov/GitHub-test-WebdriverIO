@@ -159,6 +159,11 @@ const FreePlan = require('../GithubElementsloginPage/PricingPlans/FreePlan')
 const EmailFieldPlan = require('../GithubElementsloginPage/PricingPlans/EmailFieldPlan')
 const UserNamFieldPlan = require('../GithubElementsloginPage/PricingPlans/UserNamFieldPlan')
 const PassFieldPlan = require('../GithubElementsloginPage/PricingPlans/PassFieldPlan')
+const ForSignUpDown = require('../PageObject/FORSignUp')
+const ExploreGithub = require('../GithubElementsloginPage/GitMainPage/ExploreGithub')
+const TabTopics = require('../GithubElementsloginPage/GitMainPage/ExploreGithub/TabTopics')
+const TextTopics = require('../GithubElementsloginPage/GitMainPage/ExploreGithub/TextTopics')
+const Auth = require('../PageObject/LoginUser')
 //const expect = require('chai').expect;
 //import {expect} from 'chai';
 
@@ -276,17 +281,10 @@ describe('Testcase #3', () => {
     })
 
     it('Log In2',() => {
-        browser.setTimeout({ 'pageLoad': 10000 })
-        EmailField.clearValue()
-        EmailField.Wait()
-        EmailField.AddValue('testehnefewfjw@beiop.com') //TestNameFGGRE2 testehnefewfjw@beiop.com  TestPassword123*%
-        PasswordField.Wait()
-        PasswordField.clearValue()
-        EmailField.Wait()
-        PasswordField.AddValue('TestPassword123*%')
-        ButtonSignIn2.Wait()
-        ButtonSignIn2.ClickSingin()
-        
+       
+        const validEmail = 'rofan24222@beiop.com';
+        const validPass = 'TestPassword123*%';
+        Auth.login(validEmail, validPass);
     })
 
     it('Check URL', () => {
@@ -304,7 +302,7 @@ describe('Testcase #3', () => {
 
         const UserNameCheck = UserNameText.GetUserNameTextinProf()
         
-        assert.strictEqual(UserNameCheck,'TestNameFGGRE2')
+        assert.strictEqual(UserNameCheck,'TestNameFGG')
         
     })
 
@@ -649,16 +647,9 @@ xdescribe('Testcase #3 Main functional test', () => {
     })
 
     it('Log In2',() => {
-        browser.setTimeout({ 'pageLoad': 10000 })
-        EmailField.clearValue()
-        EmailField.Wait()
-        EmailField.AddValue('testehnefewfjw@beiop.com') //TestNameFGGRE2 testehnefewfjw@beiop.com  TestPassword123*%
-        PasswordField.Wait()
-        PasswordField.clearValue()
-        EmailField.Wait()
-        PasswordField.AddValue('TestPassword123*%')
-        ButtonSignIn2.Wait()
-        ButtonSignIn2.ClickSingin()
+        const validEmail = 'rofan24222@beiop.com';
+        const validPass = 'TestPassword123*%';
+        Auth.login(validEmail, validPass);
         
     })
 
@@ -759,8 +750,8 @@ xdescribe('Testcase #3 Main functional test', () => {
         CreateColumn.Click()
     })
     it('Delete a Project', () => {
-        // browser.url('https://github.com/TestNameFGGRE2?tab=projects')  // auto delete projects
-        // $('[href="/users/TestNameFGGRE2/projects/16"]').click()
+        // browser.url('https://github.com/TestNameFGG?tab=projects')  // auto delete projects
+        // $('[href="/users/TestNameFGG/projects/16"]').click()
         CloseAddCloumn.WaitForClickable()
         CloseAddCloumn.Click()
         ButtonMenu.WaitForClickable()
@@ -871,7 +862,7 @@ describe('Forgot Password value "aa@@google.com"', () => {
         SendMail.Click()
     })
 })
-describe('Forgot Password value "testehnefewfjw@beiop.com"', () => {
+describe('Forgot Password value "rofan24222@beiop.com"', () => {
     it('open url', () => {
         browser.setWindowSize(1920,1080)
         browser.url('https://github.com/')
@@ -883,9 +874,9 @@ describe('Forgot Password value "testehnefewfjw@beiop.com"', () => {
         
     })
 
-    it('Forgot pass Neg "testehnefewfjw@beiop.com" ',() => {
+    it('Forgot pass Neg "rofan24222@beiop.com" ',() => {
         Forgotpass.Click()
-        $('#email_field').addValue('testehnefewfjw@beiop.com')
+        $('#email_field').addValue('rofan24222@beiop.com')
         SendMail.Click()
         const checktext = SendForgotMailText.GetText()
         assert.strictEqual(checktext,'Check your email for a link to reset your password. If it doesn’t appear within a few minutes, check your spam folder.')
@@ -928,40 +919,54 @@ xdescribe('Testcase #6 Pricing', () => {
             Plans.Click()
             FreePlan.WaitForClickable()
             FreePlan.Click()
-            UserNamFieldPlan.AddValue('TestNameFGGRE2')
-            EmailFieldPlan.AddValue('testehnefewfjw@beiop.com')
+            UserNamFieldPlan.AddValue('TestNameFGG')
+            EmailFieldPlan.AddValue('rofan24222@beiop.com')
             PassFieldPlan.AddValue('TestPassword123*%')
         })
 
     })
 })
 
-
-    // let arr = ["Test1", "Test2", "Test3","Test4","Test5",];
-    
-    // for (let i = 0; i < arr.length; i++) {
-      
-    //   browser.setWindowSize(1920,1080)
-    //   browser.url('https://github.com/')
-    //   $('[id="user[login]-footer"]').scrollIntoView()
-    //   $('[id="user[login]-footer"]').addValue(arr[i])
-    //   browser.pause(3000)
-    
-    // }
-    
-    it('open url', () => {
-        let arr = ["EDTb2ZTMzgUg7Uaw", "8kTrZyFt4GGV4JSv", "2zhxdYYRGyeddLjK","x5kz87zdWXxxHa2r","8j6UhokMavn2w9Z2"];
-        let email = ["Test1@gmail.com", "Test2@gmail.com", "Test3@gmail.com","Test4@gmail.com","Test5@gmail.com"];
-        let password = ['9:)L"j/)Q$wT~<ie', 'n]%Yo:*a:-pu8S%', 'b}#2<WiGxT)GU;', '[J#~;Ek+^S*Rd$M8', 'FwoM<`y[~Z;{eK5K']
-    
-    for (let i = 0; i < arr.length; i++) {
-        browser.setWindowSize(1920,1080)
-        browser.url('https://github.com/')
-        $('[id="user[login]-footer"]').scrollIntoView()
-        $('[id="user[login]-footer"]').addValue(arr[i])
-        $('[id="user[email]-footer"]').addValue(email[i])
-        $('[id="user[password]-footer"]').addValue(password[i])
-        //$('[class="btn-mktg btn-primary-mktg btn-block mt-n1"]').click()
-        browser.pause(2000)
-    }
+xdescribe('Testcase #7 Explore Github', () => {
+    describe('Explore github', () => {
+        it('open url', () => {
+            browser.setWindowSize(1920, 1080)
+            browser.url('https://github.com/')
+        })
+        it('mouse forward to Explore', () => {
+            Explore.WaitForClickable()
+            Explore.MoveTo()
+            // Explore.Click()
+            ExploreGithub.WaitForClickable()
+            ExploreGithub.Click()
+            TabTopics.WaitForClickable()
+            TabTopics.Click()
+        })
+        it('assert Text Topics', () => {
+            const TextTopicsp = TextTopics.GetText()
+            assert.strictEqual(TextTopicsp, 'Topics')
+        })
     })
+})
+
+
+xdescribe('Testcase #8 Topics search', () => {
+    describe('Explore github', () => {
+        it('open url', () => {
+            browser.setWindowSize(1920, 1080)
+            browser.url('https://github.com/')
+        })
+        it('mouse forward to Explore', () => {
+            Explore.WaitForClickable()
+            Explore.MoveTo()
+            // Explore.Click()
+            ExploreGithub.WaitForClickable()
+            ExploreGithub.Click()
+            TabTopics.WaitForClickable()
+            TabTopics.Click()
+
+        })
+    })
+})
+
+
