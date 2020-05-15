@@ -20,7 +20,7 @@ class ExploreGithub {
 
     Wait(){
         browser.waitUntil(() => {
-        return this.locator.isDisplayed();
+        return this.locator.isExisting();
         }, 3000, 'ExploreGithub is not displayed');
 
     }

@@ -39,22 +39,22 @@
 //         browser.setWindowSize(1920,1080)
 //         browser.url('https://webdriver.io/')
 //         mainPage.searchInput.addValue('test');
-        
+
 //         mainPage.setUserName(' type with metod')
-        
-       
+
+
 //     })
 
 //     it('shoud click docs button', () => {
 //         ButtonDocs.clickButtonDocs();
 //         ButtonAPI.clickButtonApi();
-        
+
 //        // ApiPreMenuContributelink.PreMenuContribute(); // for window resolution >1027 (Width) 
 //         ApiContributelink.ContributeclickLink();
-        
+
 //         ButtonHelp.clickButtonHelp()
-        
-        
+
+
 //     //    ApiContributelink.ContributeclickLink(); 
 //     })
 //     it('is displayed', () => {
@@ -65,9 +65,9 @@
 //     })
 //     it('Past versions', () => {
 //         PastVersions.PastVersionsClick() //don't work with window resolution > 1027px (Width)
-        
+
 //     })
-    
+
 //     it('Click DocV5', () => {
 //         DocV5PastVer.DocV5Click()
 //     })
@@ -153,7 +153,7 @@ const SendMail = require('../GithubElementsloginPage/SignInpage/SendMail')
 const SendForgotMailText = require('../GithubElementsloginPage/SignInpage/SendForgotMailText')
 const WhyGithub = require('../GithubElementsloginPage/GitMainPage/WhyGithub')
 const Explore = require('../GithubElementsloginPage/GitMainPage/Explore')
-const  Pricing = require('../GithubElementsloginPage/GitMainPage/Pricing')
+const Pricing = require('../GithubElementsloginPage/GitMainPage/Pricing')
 const Plans = require('../GithubElementsloginPage/GitMainPage/Plans')
 const FreePlan = require('../GithubElementsloginPage/PricingPlans/FreePlan')
 const EmailFieldPlan = require('../GithubElementsloginPage/PricingPlans/EmailFieldPlan')
@@ -164,16 +164,42 @@ const ExploreGithub = require('../GithubElementsloginPage/GitMainPage/ExploreGit
 const TabTopics = require('../GithubElementsloginPage/GitMainPage/ExploreGithub/TabTopics')
 const TextTopics = require('../GithubElementsloginPage/GitMainPage/ExploreGithub/TextTopics')
 const Auth = require('../PageObject/LoginUser')
+const SearchHeader = require('../GithubElementsloginPage/GitMainPage/ExploreGithub/SearchHeader')
+const ButtonTypescript = require('../GithubElementsloginPage/GitMainPage/ExploreGithub/SearchPage/ButtonTypescript')
+const FirstResultinlist = require('../GithubElementsloginPage/GitMainPage/ExploreGithub/SearchPage/FirstResultinlist')
+const StartEnterprise = require('../GithubElementsloginPage/GitMainPage/StartEnterprise')
+const EnterpriseCloud = require('../GithubElementsloginPage/GitMainPage/Enterprise/EnterpriseCloud')
+const UserNameEnterprise = require('../GithubElementsloginPage/GitMainPage/Enterprise/UserNameEnterprise')
+const EmailEnterprise = require('../GithubElementsloginPage/GitMainPage/Enterprise/EmailEnterprise')
+const PasswEnterprise = require('../GithubElementsloginPage/GitMainPage/Enterprise/PasswEnterprise')
+const EnterpriseServer = require('../GithubElementsloginPage/GitMainPage/Enterprise/EnterpriseServer')
+const UserNameEPServer = require('../GithubElementsloginPage/GitMainPage/Enterprise/ServerEnterprise/UserNameEPServer')
+const CompanyEPServer = require('../GithubElementsloginPage/GitMainPage/Enterprise/ServerEnterprise/CompanyEPServer')
+const WorkEmail = require('../GithubElementsloginPage/GitMainPage/Enterprise/ServerEnterprise/WorkEmail')
+const PhoneNumb = require('../GithubElementsloginPage/GitMainPage/Enterprise/ServerEnterprise/PhoneNumb')
+const RadioDeployonAWS = require('../GithubElementsloginPage/GitMainPage/Enterprise/ServerEnterprise/RadioDeployonAWS')
+const RadioYes = require('../GithubElementsloginPage/GitMainPage/Enterprise/ServerEnterprise/RadioYes')
+const Questions = require('..//GithubElementsloginPage/GitMainPage/Enterprise/ServerEnterprise/Questions')
+const AcceptCheckBox = require('../GithubElementsloginPage/GitMainPage/Enterprise/ServerEnterprise/AcceptCheckBox')
+const Carriers = require('../GithubElementsloginPage/GitMainPage/Carriers')
+const OpenPositions = require('../GithubElementsloginPage/GitMainPage/OpenPositions')
+const GetPositionsText = require('../GithubElementsloginPage/GitMainPage/GetPositionsText')
+const NameRepositorylink = require('../GithubElementsloginPage/Repositorytab/NameRepositorylink')
+const TabSettingsRepo = require("../GithubElementsloginPage/Repositorytab/TabSettingsRepo")
+const ButtDeletRepo = require('../GithubElementsloginPage/Repositorytab/ButtDeletRepo')
+const GetTextNameDelRepo = require('../GithubElementsloginPage/Repositorytab/GetTextNameDelRepo')
+const InputFDelRepoName = require('../GithubElementsloginPage/Repositorytab/InputFDelRepoName')
+const ButDelRepoFinal = require('../GithubElementsloginPage/Repositorytab/ButDelRepoFinal')
 //const expect = require('chai').expect;
 //import {expect} from 'chai';
 
 
-xdescribe('Testcase #1', () => {
+describe('Testcase #1', () => {
 
     it('open url', () => {
-        browser.setWindowSize(1920,1080)
+        browser.setWindowSize(1920, 1080)
         browser.url('https://github.com/')
-        
+
     })
 
     it('random data Name', () => {
@@ -182,7 +208,7 @@ xdescribe('Testcase #1', () => {
         UserNamefield.UsernameAddValue(RandomName.Value());
         browser.pause(000);
     })
-    
+
     it('random data Email', () => {
         UserEmailField.Wait()
         UserEmailField.UserEmailAddValue(RandomEmail.Value());
@@ -194,7 +220,7 @@ xdescribe('Testcase #1', () => {
         UserPasswordField.UserPasswordAddValue(RandomPassDB.Value());
         browser.pause(000);
     })
-    
+
     it('ClickSignUP', () => {
         ButtonSignUp.Wait()
         ButtonSignUp.SingUpClick()
@@ -206,7 +232,7 @@ xdescribe('Testcase #1', () => {
     it('Check URL', () => {
 
         const Urllink = browser.getUrl()
-        assert.strictEqual(Urllink,'https://github.com/join')
+        assert.strictEqual(Urllink, 'https://github.com/join')
         //expect(Urllink).to.equal('https://github.com/join');
         browser.pause(0000);
 
@@ -217,17 +243,17 @@ xdescribe('Testcase #1', () => {
         Display = VerifYourAccount.locator().isDisplayed();
 
         console.log("IS DISPLAYED?: " + Display); //outputs: true
-        
+
         browser.pause(0000);
     })
 
 
-}) 
+})
 
-xdescribe('Testcase #2', () => {
-    
+describe('Testcase #2', () => {
+
     it('open url', () => {
-        browser.setWindowSize(1920,1080)
+        browser.setWindowSize(1920, 1080)
         browser.url('https://github.com/')
     })
 
@@ -258,15 +284,381 @@ xdescribe('Testcase #2', () => {
     // it('Sign Github', () => {
     //     DownButtonSignUp.ClickButton()
     //     browser.pause(10000);
-    
+
     // })
 
 })
 
-xdescribe('Testcase #3 full dropdownlist', () => {
-describe('Testcase #3', () => {
+describe('Testcase #3 full dropdownlist', () => {
+    describe('Testcase #3', () => {
+        it('open url', () => {
+            browser.setWindowSize(1920, 1080)
+            browser.url('https://github.com/')
+        })
+
+        it('Click SignIn', () => {
+            ButtonSignIn.Wait()
+            ButtonSignIn.SinginClick()
+        })
+
+        it('Log In', () => {
+            EmailField.Wait()
+
+        })
+
+        it('Log In2', () => {
+
+            const validEmail = 'rofan24222@beiop.com';
+            const validPass = 'TestPassword123*%';
+            Auth.login(validEmail, validPass);
+        })
+
+        it('Check URL', () => {
+
+            const Urllink = browser.getUrl()
+            assert.strictEqual(Urllink, 'https://github.com/')
+        })
+
+        it('Open profile list', () => {
+            ButtonProfileDropList.Wait()
+            ButtonProfileDropList.ClickButton()
+        })
+
+        it('User Name Check', () => {
+
+            const UserNameCheck = UserNameText.GetUserNameTextinProf()
+
+            assert.strictEqual(UserNameCheck, 'TestNameFGG')
+
+        })
+
+        it(' is Displayed? Your Profile ', () => {
+
+            YourProfileButton.isDisplayedYourProfile()
+
+        })
+
+        it('Clickable? Your Profile', () => {
+
+            YourProfileButton.Clickable()
+
+        })
+
+        it('Enable? Your Profile', () => {
+
+            YourProfileButton.Enable()
+
+        })
+
+        it('Click Your Profile', () => {
+
+            YourProfileButton.Wait()
+            YourProfileButton.ClickYourProfileButton()
+
+            browser.back();
+        })
+
+    })
+
+    describe('Cycle #2 test Repository link', () => {
+
+
+        it('Open profile list', () => {
+            ButtonProfileDropList.Wait()
+            ButtonProfileDropList.ClickButton()
+        })
+
+        it(' is Displayed? Your Reposytory button ', () => {
+
+            YourRepositoryButton.isDisplayed()
+
+        })
+
+        it('Clickable? Your Reposytory button', () => {
+
+            YourRepositoryButton.Clickable()
+
+        })
+
+        it('Enable? Your Reposytory button', () => {
+
+            YourRepositoryButton.Enable()
+
+        })
+
+        it('Click Your Reposytory button', () => {
+            YourRepositoryButton.Wait()
+            YourRepositoryButton.Click()
+
+            browser.pause(000)
+            browser.back();
+        })
+
+
+    })
+
+    describe('Cycle #3 test Projects link', () => {
+
+
+        it('Open profile list', () => {
+            ButtonProfileDropList.Wait()
+            ButtonProfileDropList.ClickButton()
+        })
+
+        it(' is Displayed? Your Project button ', () => {
+
+            YourProjectButton.isDisplayed()
+
+        })
+
+        it('Clickable? Your Project button', () => {
+
+            YourProjectButton.Clickable()
+
+        })
+
+        it('Enable? Your Project button', () => {
+
+            YourProjectButton.Enable()
+
+        })
+
+        it('Click Your Project button', () => {
+            YourProjectButton.Wait()
+            YourProjectButton.Click()
+
+            browser.pause(000)
+
+            browser.back();
+        })
+
+
+    })
+
+    describe('Cycle #4 test YourStarts link', () => {
+
+        it('Open profile list', () => {
+            ButtonProfileDropList.Wait()
+            ButtonProfileDropList.ClickButton()
+        })
+
+        it(' is Displayed? YourStarts button ', () => {
+
+            YourStartsButton.isDisplayed()
+
+        })
+
+        it('Clickable? YourStarts button', () => {
+
+            YourStartsButton.Clickable()
+
+        })
+
+        it('Enable? YourStarts button', () => {
+
+            YourStartsButton.Enable()
+
+        })
+
+        it('Click YourStarts button', () => {
+            YourStartsButton.Wait()
+            YourStartsButton.Click()
+
+            browser.back();
+
+            browser.pause(000)
+
+        })
+
+    })
+
+    describe('Cycle #5 test YourGists link', () => {
+
+        it('Open profile list', () => {
+            ButtonProfileDropList.Wait()
+            ButtonProfileDropList.ClickButton()
+        })
+
+        it(' is Displayed? YourGists button ', () => {
+
+            YourGistsButton.isDisplayed()
+
+        })
+
+        it('Clickable? YourGists button', () => {
+
+            YourGistsButton.Clickable()
+
+        })
+
+        it('Enable? YourGists button', () => {
+
+            YourGistsButton.Enable()
+
+        })
+
+        it('Click YourGists button and back', () => {
+            YourGistsButton.Wait()
+            YourGistsButton.Click()
+            YoudonthaveGists.Wait()
+            YoudonthaveGists.Click()
+            BackGitHub.Click()
+        })
+
+
+    })
+
+    describe('Cycle #6 test Feature preview link', () => {
+
+        it('Open profile list', () => {
+            ButtonProfileDropList.Wait()
+            ButtonProfileDropList.ClickButton()
+        })
+
+        it(' is Displayed? Feature preview button ', () => {
+
+            FeaturePreButton.isDisplayed()
+
+        })
+
+        it('Clickable? Feature preview button', () => {
+
+            FeaturePreButton.Clickable()
+
+        })
+
+        it('Enable? Feature preview button', () => {
+
+            FeaturePreButton.Enable()
+
+        })
+
+        it('Click Feature preview button', () => {
+            FeaturePreButton.Wait()
+            FeaturePreButton.Click()
+
+
+        })
+        it('Click Feature preview button', () => {
+            // FeatureClosureX.isDisplayed()
+            // FeatureClosureX.Clickable()
+            // FeatureClosureX.Enable()
+            // FeatureClosureX.WaitForClickable()
+            // FeatureClosureX.Click()
+            browser.url('https://github.com/') // Не работает клик на "X" закрытие диалогового окна
+        })
+    })
+
+    describe('Cycle #7 test Help button link', () => {
+        it('Open profile list', () => {
+            ButtonProfileDropList.Wait()
+            ButtonProfileDropList.ClickButton()
+        })
+
+        it(' is Displayed? Help button ', () => {
+
+            HelpButton.isDisplayed()
+
+        })
+
+        it('Clickable? Help button', () => {
+
+            HelpButton.Clickable()
+
+        })
+
+        it('Enable? Help button', () => {
+
+            HelpButton.Enable()
+
+        })
+
+        it('Click Help button', () => {
+            HelpButton.Wait()
+            HelpButton.Click()
+
+            browser.back();
+
+            browser.pause(000)
+
+        })
+    })
+
+    describe('Cycle #7 test Settings button link', () => {
+        it('Open profile list', () => {
+            ButtonProfileDropList.Wait()
+            ButtonProfileDropList.ClickButton()
+        })
+
+        it(' is Displayed? Settings button ', () => {
+
+            SettingsButton.isDisplayed()
+
+        })
+
+        it('Clickable? Settings button', () => {
+
+            SettingsButton.Clickable()
+
+        })
+
+        it('Enable? Settings button', () => {
+
+            SettingsButton.Enable()
+
+        })
+
+        it('Click Settings button', () => {
+            SettingsButton.Wait()
+            SettingsButton.Click()
+
+            browser.back();
+
+            browser.pause(000)
+
+        })
+    })
+
+    describe('Cycle #7 test SingOut button link', () => {
+        it('Open profile list', () => {
+            ButtonProfileDropList.Wait()
+            ButtonProfileDropList.ClickButton()
+        })
+
+        it(' is Displayed? SingOut button ', () => {
+
+            SingOutButton.isDisplayed()
+
+        })
+
+        it('Clickable? SingOut button', () => {
+
+            SingOutButton.Clickable()
+
+        })
+
+        it('Enable? SingOut button', () => {
+
+            SingOutButton.Enable()
+
+        })
+
+        it('Click SingOut button', () => {
+            SingOutButton.Wait()
+            SingOutButton.Click()
+
+            browser.back();
+
+            browser.pause(000)
+
+        })
+    })
+})
+
+describe('Testcase #3 Main functional test', () => {
+
     it('open url', () => {
-        browser.setWindowSize(1920,1080)
+        browser.setWindowSize(1920, 1080)
         browser.url('https://github.com/')
     })
 
@@ -275,382 +667,16 @@ describe('Testcase #3', () => {
         ButtonSignIn.SinginClick()
     })
 
-    it('Log In',() => {
+    it('Log In', () => {
         EmailField.Wait()
-        
+
     })
 
-    it('Log In2',() => {
-       
+    it('Log In2', () => {
         const validEmail = 'rofan24222@beiop.com';
         const validPass = 'TestPassword123*%';
         Auth.login(validEmail, validPass);
-    })
 
-    it('Check URL', () => {
-
-        const Urllink = browser.getUrl()
-        assert.strictEqual(Urllink,'https://github.com/')
-    })
-
-    it('Open profile list', () => {
-        ButtonProfileDropList.Wait()
-        ButtonProfileDropList.ClickButton()
-    })
-
-    it('User Name Check', () => {
-
-        const UserNameCheck = UserNameText.GetUserNameTextinProf()
-        
-        assert.strictEqual(UserNameCheck,'TestNameFGG')
-        
-    })
-
-    it(' is Displayed? Your Profile ', () => {
-
-        YourProfileButton.isDisplayedYourProfile()
-        
-    })
-
-    it('Clickable? Your Profile', () => {
-        
-        YourProfileButton.Clickable()
-
-    })
-
-    it('Enable? Your Profile', () => {
-
-        YourProfileButton.Enable()
-
-    })
-    
-    it('Click Your Profile', () => {
-
-        YourProfileButton.Wait()
-        YourProfileButton.ClickYourProfileButton()
-        
-        browser.back();
-    })
-    
-})
-
-describe('Cycle #2 test Repository link', () => {
-    
-
-    it('Open profile list', () => {
-        ButtonProfileDropList.Wait()
-        ButtonProfileDropList.ClickButton()
-    })
-
-    it(' is Displayed? Your Reposytory button ', () => {
-
-        YourRepositoryButton.isDisplayed()
-        
-    })
-
-    it('Clickable? Your Reposytory button', () => {
-        
-        YourRepositoryButton.Clickable()
-
-    })
-
-    it('Enable? Your Reposytory button', () => {
-        
-        YourRepositoryButton.Enable()
-
-    })
-    
-    it('Click Your Reposytory button', () => {
-        YourRepositoryButton.Wait()
-        YourRepositoryButton.Click()
-
-        browser.pause(000)
-        browser.back();
-    })
-
-    
-})
-
-describe('Cycle #3 test Projects link', () => {
-    
-
-    it('Open profile list', () => {
-        ButtonProfileDropList.Wait()
-        ButtonProfileDropList.ClickButton()
-    })
-
-    it(' is Displayed? Your Project button ', () => {
-
-        YourProjectButton.isDisplayed()
-        
-    })
-
-    it('Clickable? Your Project button', () => {
-        
-        YourProjectButton.Clickable()
-
-    })
-
-    it('Enable? Your Project button', () => {
-        
-        YourProjectButton.Enable()
-
-    })
-
-    it('Click Your Project button', () => {
-        YourProjectButton.Wait()
-        YourProjectButton.Click()
-
-        browser.pause(000)
-
-        browser.back();
-    })
-
-    
-})
-
-describe('Cycle #4 test YourStarts link', () => {
-
-    it('Open profile list', () => {
-        ButtonProfileDropList.Wait()
-        ButtonProfileDropList.ClickButton()
-    })
-
-    it(' is Displayed? YourStarts button ', () => {
-
-        YourStartsButton.isDisplayed()
-        
-    })
-
-    it('Clickable? YourStarts button', () => {
-        
-        YourStartsButton.Clickable()
-
-    })
-
-    it('Enable? YourStarts button', () => {
-        
-        YourStartsButton.Enable()
-
-    })
-
-    it('Click YourStarts button', () => {
-        YourStartsButton.Wait()
-        YourStartsButton.Click()
-
-        browser.back();
-
-        browser.pause(000)
-
-    })
-
-})
-
-describe('Cycle #5 test YourGists link', () => {
-
-    it('Open profile list', () => {
-        ButtonProfileDropList.Wait()
-        ButtonProfileDropList.ClickButton()
-    })
-
-    it(' is Displayed? YourGists button ', () => {
-
-        YourGistsButton.isDisplayed()
-        
-    })
-
-    it('Clickable? YourGists button', () => {
-        
-        YourGistsButton.Clickable()
-
-    })
-
-    it('Enable? YourGists button', () => {
-        
-        YourGistsButton.Enable()
-
-    })
-
-    it('Click YourGists button and back', () => {
-        YourGistsButton.Wait()
-        YourGistsButton.Click()
-        YoudonthaveGists.Wait()
-        YoudonthaveGists.Click()
-        BackGitHub.Click()
-    })
-
-
-})
-
-describe('Cycle #6 test Feature preview link', () => {
-
-    it('Open profile list', () => {
-        ButtonProfileDropList.Wait()
-        ButtonProfileDropList.ClickButton()
-    })
-
-    it(' is Displayed? Feature preview button ', () => {
-
-        FeaturePreButton.isDisplayed()
-        
-    })
-
-    it('Clickable? Feature preview button', () => {
-        
-        FeaturePreButton.Clickable()
-
-    })
-
-    it('Enable? Feature preview button', () => {
-        
-        FeaturePreButton.Enable()
-
-    })
-
-    it('Click Feature preview button', () => {
-        FeaturePreButton.Wait()
-        FeaturePreButton.Click()
-        
-        
-    })
-    it('Click Feature preview button', () => {
-        // FeatureClosureX.isDisplayed()
-        // FeatureClosureX.Clickable()
-        // FeatureClosureX.Enable()
-        // FeatureClosureX.WaitForClickable()
-        // FeatureClosureX.Click()
-        browser.url('https://github.com/') // Не работает клик на "X" закрытие диалогового окна
-    })
-})
-
-describe('Cycle #7 test Help button link', () => {
-    it('Open profile list', () => {
-        ButtonProfileDropList.Wait()
-        ButtonProfileDropList.ClickButton()
-    })
-
-    it(' is Displayed? Help button ', () => {
-
-        HelpButton.isDisplayed()
-        
-    })
-
-    it('Clickable? Help button', () => {
-        
-        HelpButton.Clickable()
-
-    })
-
-    it('Enable? Help button', () => {
-        
-        HelpButton.Enable()
-
-    })
-
-    it('Click Help button', () => {
-        HelpButton.Wait()
-        HelpButton.Click()
-
-        browser.back();
-
-        browser.pause(000)
-
-    })
-})
-
-describe('Cycle #7 test Settings button link', () => {
-    it('Open profile list', () => {
-        ButtonProfileDropList.Wait()
-        ButtonProfileDropList.ClickButton()
-    })
-
-    it(' is Displayed? Settings button ', () => {
-
-        SettingsButton.isDisplayed()
-        
-    })
-
-    it('Clickable? Settings button', () => {
-        
-        SettingsButton.Clickable()
-
-    })
-
-    it('Enable? Settings button', () => {
-        
-        SettingsButton.Enable()
-
-    })
-
-    it('Click Settings button', () => {
-        SettingsButton.Wait()
-        SettingsButton.Click()
-
-        browser.back();
-
-        browser.pause(000)
-
-    })
-})
-
-describe('Cycle #7 test SingOut button link', () => {
-    it('Open profile list', () => {
-        ButtonProfileDropList.Wait()
-        ButtonProfileDropList.ClickButton()
-    })
-
-    it(' is Displayed? SingOut button ', () => {
-
-        SingOutButton.isDisplayed()
-        
-    })
-
-    it('Clickable? SingOut button', () => {
-        
-        SingOutButton.Clickable()
-
-    })
-
-    it('Enable? SingOut button', () => {
-        
-        SingOutButton.Enable()
-
-    })
-
-    it('Click SingOut button', () => {
-        SingOutButton.Wait()
-        SingOutButton.Click()
-
-        browser.back();
-
-        browser.pause(000)
-
-    })
-})
-})
-
-xdescribe('Testcase #3 Main functional test', () => {
-
-    it('open url', () => {
-        browser.setWindowSize(1920,1080)
-        browser.url('https://github.com/')
-    })
-
-    it('Click SignIn', () => {
-        ButtonSignIn.Wait()
-        ButtonSignIn.SinginClick()
-    })
-
-    it('Log In',() => {
-        EmailField.Wait()
-        
-    })
-
-    it('Log In2',() => {
-        const validEmail = 'rofan24222@beiop.com';
-        const validPass = 'TestPassword123*%';
-        Auth.login(validEmail, validPass);
-        
     })
 
     it('Open profile list', () => {
@@ -674,7 +700,7 @@ xdescribe('Testcase #3 Main functional test', () => {
         PackagesTab.Click()
         browser.pause(000)
         browser.back()
-        
+
         StarsTab.Wait()
         StarsTab.isDisplayed()
         StarsTab.Clickable()
@@ -707,7 +733,7 @@ xdescribe('Testcase #3 Main functional test', () => {
         OverviewTab.Click()
         browser.pause(000)
         browser.back()
-    
+
     })
 
     it('Create a Project', () => {
@@ -762,7 +788,7 @@ xdescribe('Testcase #3 Main functional test', () => {
         ButtonEdit.Click()
         ButtonDelete.ScrollIntoView()
         ButtonDelete.WaitForClickable()
-       
+
         ButtonDelete.Click()
         browser.acceptAlert()
         browser.pause(000)
@@ -785,7 +811,7 @@ xdescribe('Testcase #3 Main functional test', () => {
 
     it(' Create repository', () => {
         ButtonNewRepos.WaitForClickable()
-        assert.strictEqual(ButtonNewRepos.GetText(),'New')
+        assert.strictEqual(ButtonNewRepos.GetText(), 'New')
         ButtonNewRepos.Click()
         NameRepositoryField.AddValue('Test Name repository')
         DecriptReposit.AddValue('Test description about new repository')
@@ -803,92 +829,111 @@ xdescribe('Testcase #3 Main functional test', () => {
         MitLicense.Click()
         CreateRepository.WaitForClickable()
         CreateRepository.Click()
+
+    })
+    it(' Delete repository', () => {
+
+        // NameRepositorylink.Wait()
+        // NameRepositorylink.Click()
+        TabSettingsRepo.Wait()
+        TabSettingsRepo.Click()
+        ButtDeletRepo.Scroll()
+        ButtDeletRepo.Click()
+        InputFDelRepoName.Wait()
+        // InputFDelRepoName.Click()
+        InputFDelRepoName.AddValue('TestNameFGG/Test-Name-repository')
+        ButDelRepoFinal.Wait()
+        ButDelRepoFinal.Click()
+        ButtonProfileDropList.Wait()
+        ButtonProfileDropList.ClickButton()
+        SingOutButton.Click()
+        browser.pause(000)
     })
 
 })
 
-xdescribe('Testcase #4 Forgot Password', () => {
-describe('Forgot Password value " "', () => {
-    it('open url', () => {
-        browser.setWindowSize(1920,1080)
-        browser.url('https://github.com/')
-    })
+describe('Testcase #4 Forgot Password', () => {
+    describe('Forgot Password value " "', () => {
+        it('open url', () => {
+            browser.setWindowSize(1920, 1080)
+            browser.url('https://github.com/')
+        })
 
-    it('Click SignIn', () => {
-        ButtonSignIn.Wait()
-        ButtonSignIn.SinginClick()
-        
-    })
+        it('Click SignIn', () => {
+            ButtonSignIn.Wait()
+            ButtonSignIn.SinginClick()
 
-    it('Forgot pass Neg " " ',() => {
-        Forgotpass.Click()
-        $('#email_field').addValue(' ')
-        SendMail.Click()
+        })
+
+        it('Forgot pass Neg " " ', () => {
+            Forgotpass.Click()
+            $('#email_field').addValue(' ')
+            SendMail.Click()
+        })
+    })
+    describe('Forgot Password value "asdfgg"', () => {
+        it('open url', () => {
+            browser.setWindowSize(1920, 1080)
+            browser.url('https://github.com/')
+        })
+
+        it('Click SignIn', () => {
+            ButtonSignIn.Wait()
+            ButtonSignIn.SinginClick()
+
+        })
+
+        it('Forgot pass Neg "asdfgg" ', () => {
+            Forgotpass.Click()
+            $('#email_field').addValue('asdfgg')
+            SendMail.Click()
+        })
+    })
+    describe('Forgot Password value "aa@@google.com"', () => {
+        it('open url', () => {
+            browser.setWindowSize(1920, 1080)
+            browser.url('https://github.com/')
+        })
+
+        it('Click SignIn', () => {
+            ButtonSignIn.Wait()
+            ButtonSignIn.SinginClick()
+
+        })
+
+        it('Forgot pass Neg "aa@@google.com" ', () => {
+            Forgotpass.Click()
+            $('#email_field').addValue('aa@@google.com')
+            SendMail.Click()
+        })
+    })
+    describe('Forgot Password value "rofan24222@beiop.com"', () => {
+        it('open url', () => {
+            browser.setWindowSize(1920, 1080)
+            browser.url('https://github.com/')
+        })
+
+        it('Click SignIn', () => {
+            ButtonSignIn.Wait()
+            ButtonSignIn.SinginClick()
+
+        })
+
+        it('Forgot pass Neg "rofan24222@beiop.com" ', () => {
+            Forgotpass.Click()
+            $('#email_field').addValue('rofan24222@beiop.com')
+            SendMail.Click()
+            const checktext = SendForgotMailText.GetText()
+            assert.strictEqual(checktext, 'Check your email for a link to reset your password. If it doesn’t appear within a few minutes, check your spam folder.')
+
+        })
     })
 })
-describe('Forgot Password value "asdfgg"', () => {
-    it('open url', () => {
-        browser.setWindowSize(1920,1080)
-        browser.url('https://github.com/')
-    })
 
-    it('Click SignIn', () => {
-        ButtonSignIn.Wait()
-        ButtonSignIn.SinginClick()
-        
-    })
-
-    it('Forgot pass Neg "asdfgg" ',() => {
-        Forgotpass.Click()
-        $('#email_field').addValue('asdfgg')
-        SendMail.Click()
-    })
-})
-describe('Forgot Password value "aa@@google.com"', () => {
-    it('open url', () => {
-        browser.setWindowSize(1920,1080)
-        browser.url('https://github.com/')
-    })
-
-    it('Click SignIn', () => {
-        ButtonSignIn.Wait()
-        ButtonSignIn.SinginClick()
-        
-    })
-
-    it('Forgot pass Neg "aa@@google.com" ',() => {
-        Forgotpass.Click()
-        $('#email_field').addValue('aa@@google.com')
-        SendMail.Click()
-    })
-})
-describe('Forgot Password value "rofan24222@beiop.com"', () => {
-    it('open url', () => {
-        browser.setWindowSize(1920,1080)
-        browser.url('https://github.com/')
-    })
-
-    it('Click SignIn', () => {
-        ButtonSignIn.Wait()
-        ButtonSignIn.SinginClick()
-        
-    })
-
-    it('Forgot pass Neg "rofan24222@beiop.com" ',() => {
-        Forgotpass.Click()
-        $('#email_field').addValue('rofan24222@beiop.com')
-        SendMail.Click()
-        const checktext = SendForgotMailText.GetText()
-        assert.strictEqual(checktext,'Check your email for a link to reset your password. If it doesn’t appear within a few minutes, check your spam folder.')
-        
-    })
-})
-})
-
-xdescribe('Testcase #5 Mouse Forward', () => {
+describe('Testcase #5 Mouse Forward', () => {
     describe('mouse forward', () => {
         it('open url', () => {
-            browser.setWindowSize(1920,1080)
+            browser.setWindowSize(1920, 1080)
             browser.url('https://github.com/')
         })
         it('mouse forward to WhyGithub', () => {
@@ -897,10 +942,12 @@ xdescribe('Testcase #5 Mouse Forward', () => {
         })
 
         it('mouse forward to Explore', () => {
+            Explore.Wait()
             Explore.MoveTo()
             Explore.isDisplayed()
         })
         it('mouse forward to Pricing', () => {
+            Pricing.WaitForClickable()
             Pricing.MoveTo()
             Pricing.isDisplayed()
         })
@@ -908,14 +955,19 @@ xdescribe('Testcase #5 Mouse Forward', () => {
     })
 })
 
-xdescribe('Testcase #6 Pricing', () => {
+describe('Testcase #6 Pricing', () => {
     describe('test pricing', () => {
         it('open url', () => {
-            browser.setWindowSize(1920,1080)
+            browser.setWindowSize(1920, 1080)
             browser.url('https://github.com/')
         })
         it('mouse forward to Pricing', () => {
+            Pricing.Wait()
+            Pricing.WaitForClickable()
             Pricing.MoveTo()
+            Pricing.Click()
+            Plans.Wait()
+            Plans.WaitForClickable()
             Plans.Click()
             FreePlan.WaitForClickable()
             FreePlan.Click()
@@ -927,46 +979,135 @@ xdescribe('Testcase #6 Pricing', () => {
     })
 })
 
-xdescribe('Testcase #7 Explore Github', () => {
+describe('Testcase #7 Explore Github', () => {
     describe('Explore github', () => {
         it('open url', () => {
             browser.setWindowSize(1920, 1080)
             browser.url('https://github.com/')
         })
         it('mouse forward to Explore', () => {
-            Explore.WaitForClickable()
+            Explore.Wait()
             Explore.MoveTo()
-            // Explore.Click()
-            ExploreGithub.WaitForClickable()
+            Explore.Click()
+            //Explore.Click()
+            ExploreGithub.Wait()
+            ExploreGithub.MoveTo()
             ExploreGithub.Click()
             TabTopics.WaitForClickable()
             TabTopics.Click()
+            browser.pause(000)
         })
         it('assert Text Topics', () => {
+            TextTopics.Wait()
             const TextTopicsp = TextTopics.GetText()
-            assert.strictEqual(TextTopicsp, 'Topics')
+            assert.strictEqual(TextTopicsp, "Topics")
         })
     })
 })
 
 
-xdescribe('Testcase #8 Topics search', () => {
+describe('Testcase #8 Spec search', () => {
     describe('Explore github', () => {
+        xit('open url', () => {
+            browser.setWindowSize(1920, 1080)
+            browser.url('https://github.com/')
+        })
+        xit('spec Topics', () => {
+            Explore.Wait()
+            Explore.MoveTo()
+            Explore.Click()
+            //Explore.Click()
+            ExploreGithub.Wait()
+            ExploreGithub.Click()
+            TabTopics.WaitForClickable()
+            TabTopics.Click()
+          
+        })
+        it('spec Search', () => {
+            SearchHeader.Wait()
+            SearchHeader.AddValue('webdriverio')
+            browser.keys("\uE007");
+            ButtonTypescript.Wait()
+            ButtonTypescript.Click()
+            FirstResultinlist.Wait()
+            FirstResultinlist.Click()
+
+            const UrllinkWebIO = browser.getUrl()
+            assert.strictEqual(UrllinkWebIO, 'https://github.com/webdriverio/webdriverio')
+            browser.pause(000)
+
+        })
+    })
+})
+
+describe('Testcase #9 Enterprise', () => {
+    describe('test', () => {
         it('open url', () => {
             browser.setWindowSize(1920, 1080)
             browser.url('https://github.com/')
         })
-        it('mouse forward to Explore', () => {
-            Explore.WaitForClickable()
-            Explore.MoveTo()
-            // Explore.Click()
-            ExploreGithub.WaitForClickable()
-            ExploreGithub.Click()
-            TabTopics.WaitForClickable()
-            TabTopics.Click()
+        it('Get started with GitHub Enterprise', () => {
+            StartEnterprise.Wait()
+            StartEnterprise.Scroll()
+            StartEnterprise.Click()
+            EnterpriseCloud.Wait()
+            EnterpriseCloud.Click()
 
+            browser.pause(000)
+        })
+
+        it('Create account Enterprise', () => {
+            UserNameEnterprise.Wait()
+            UserNameEnterprise.AddValue(RandomName.Value())
+            EmailEnterprise.Wait()
+            EmailEnterprise.AddValue(RandomEmail.Value())
+            PasswEnterprise.Wait()
+            PasswEnterprise.AddValue(RandomPassDB.Value())
+            browser.back()
+            browser.pause(000)
+        })
+
+        it('Create account EnterpriseServer', () => {
+            EnterpriseServer.Wait()
+            EnterpriseServer.Click()
+            UserNameEPServer.Wait()
+            UserNameEPServer.AddValue(RandomName.Value())
+            CompanyEPServer.Wait()
+            CompanyEPServer.AddValue(RandomName.Value())
+            WorkEmail.Wait()
+            WorkEmail.AddValue(RandomEmail.Value())
+            PhoneNumb.Wait()
+            PhoneNumb.AddValue("+3790991234432")
+            RadioDeployonAWS.Wait()
+            RadioDeployonAWS.Click()
+            RadioYes.Wait()
+            RadioYes.Click()
+            Questions.Wait()
+            Questions.AddValue('Some text test text for some text, Software testing is an investigation conducted to provide stakeholders with information about the quality of the software product or service under test. Software testing can also provide an objective, independent view of the software to allow the business to appreciate and understand the risks of software ')
+            AcceptCheckBox.Wait()
+            AcceptCheckBox.Click()
         })
     })
 })
 
+describe('Testcase #10 Carriers', () => {
+    it('open url', () => {
+        browser.setWindowSize(1920, 1080)
+        browser.url('https://github.com/')
+    })
+    it('Carriers', () => {
+        Carriers.Wait()
+        Carriers.Scroll()
+        Carriers.Click()
+        OpenPositions.Scroll()
+        OpenPositions.Wait()
+        OpenPositions.Click()
+    })
 
+
+    it('get content from table cell', () => {
+
+        // $('[class="pb-md-6"]').scrollIntoView()
+        GetPositionsText.GetTextConsole()
+    });
+})

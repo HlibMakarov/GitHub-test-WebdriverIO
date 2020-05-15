@@ -1,7 +1,7 @@
 class Pricing {
 
     get locator() {
-        return $('li.d-block:nth-child(6) > details:nth-child(1) > summary')
+        return $('//summary[contains(text(),"Pricing")]')
     }
     isDisplayed () {
         this.locator.isDisplayed();
@@ -21,7 +21,7 @@ class Pricing {
 
     Wait(){
         browser.waitUntil(() => {
-        return this.locator.isDisplayed();
+        return this.locator.isExisting();
         }, 3000, 'Pricing is not displayed');
 
     }

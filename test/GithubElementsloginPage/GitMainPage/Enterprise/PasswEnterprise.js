@@ -1,19 +1,19 @@
-class TextTopics {
+class PasswEnterprise {
 
     get locator() {
-        return $('//h1[text()="Topics"]')
-    }
+        return $('[id="user_password"]')
+    }             
     isDisplayed () {
         this.locator.isDisplayed();
-        console.log("IS DISPLAYED TextTopics?: " + this.locator.isDisplayed()) //outputs: true
+        console.log("IS DISPLAYED PasswEnterprise?: " + this.locator.isDisplayed()) //outputs: true
     }
     Clickable() {
         this.locator.isClickable();
-        console.log("IS CLICKABLE TextTopics?: "+ this.locator.isClickable())  //outputs: true!
+        console.log("IS CLICKABLE PasswEnterprise?: "+ this.locator.isClickable())  //outputs: true!
     }
     Enable (){
         this.locator.isEnabled();
-        console.log("isEnabled TextTopics:" + this.locator.isEnabled()); // output: true
+        console.log("isEnabled PasswEnterprise:" + this.locator.isEnabled()); // output: true
     }
     Click () {
         this.locator.click();
@@ -22,7 +22,7 @@ class TextTopics {
     Wait(){
         browser.waitUntil(() => {
         return this.locator.isExisting();
-        }, 3000, 'TextTopics is not isExisting();');
+        }, 3000, 'PasswEnterprise is not displayed');
 
     }
 
@@ -43,10 +43,12 @@ class TextTopics {
         this.locator.moveTo()
         
     }
-  
+    Scroll() {
+        this.locator.scrollIntoView();
+    }
 
     
  
 }
 
-module.exports = new TextTopics()
+module.exports = new PasswEnterprise()

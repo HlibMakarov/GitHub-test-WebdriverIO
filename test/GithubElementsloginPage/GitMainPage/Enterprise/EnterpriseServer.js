@@ -1,19 +1,19 @@
-class TextTopics {
+class EnterpriseServer {
 
     get locator() {
-        return $('//h1[text()="Topics"]')
-    }
+        return $('//div[contains(text(),"Enterprise Server") and @class="h1 "]')
+    }             
     isDisplayed () {
         this.locator.isDisplayed();
-        console.log("IS DISPLAYED TextTopics?: " + this.locator.isDisplayed()) //outputs: true
+        console.log("IS DISPLAYED EnterpriseServer?: " + this.locator.isDisplayed()) //outputs: true
     }
     Clickable() {
         this.locator.isClickable();
-        console.log("IS CLICKABLE TextTopics?: "+ this.locator.isClickable())  //outputs: true!
+        console.log("IS CLICKABLE EnterpriseServer?: "+ this.locator.isClickable())  //outputs: true!
     }
     Enable (){
         this.locator.isEnabled();
-        console.log("isEnabled TextTopics:" + this.locator.isEnabled()); // output: true
+        console.log("isEnabled EnterpriseServer:" + this.locator.isEnabled()); // output: true
     }
     Click () {
         this.locator.click();
@@ -22,7 +22,7 @@ class TextTopics {
     Wait(){
         browser.waitUntil(() => {
         return this.locator.isExisting();
-        }, 3000, 'TextTopics is not isExisting();');
+        }, 3000, 'EnterpriseServer is not displayed');
 
     }
 
@@ -43,10 +43,12 @@ class TextTopics {
         this.locator.moveTo()
         
     }
-  
+    Scroll() {
+        this.locator.scrollIntoView();
+    }
 
     
  
 }
 
-module.exports = new TextTopics()
+module.exports = new EnterpriseServer()

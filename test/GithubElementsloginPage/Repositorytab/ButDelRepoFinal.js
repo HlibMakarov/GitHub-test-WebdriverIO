@@ -1,19 +1,19 @@
-class TextTopics {
+class ButDelRepoFinal {
 
     get locator() {
-        return $('//h1[text()="Topics"]')
-    }
+        return $('//*[text()="I understand the consequences, delete this repository"]')
+    }             
     isDisplayed () {
         this.locator.isDisplayed();
-        console.log("IS DISPLAYED TextTopics?: " + this.locator.isDisplayed()) //outputs: true
+        console.log("IS DISPLAYED ButDelRepoFinal?: " + this.locator.isDisplayed()) //outputs: true
     }
     Clickable() {
         this.locator.isClickable();
-        console.log("IS CLICKABLE TextTopics?: "+ this.locator.isClickable())  //outputs: true!
+        console.log("IS CLICKABLE ButDelRepoFinal?: "+ this.locator.isClickable())  //outputs: true!
     }
     Enable (){
         this.locator.isEnabled();
-        console.log("isEnabled TextTopics:" + this.locator.isEnabled()); // output: true
+        console.log("isEnabled ButDelRepoFinal:" + this.locator.isEnabled()); // output: true
     }
     Click () {
         this.locator.click();
@@ -22,7 +22,7 @@ class TextTopics {
     Wait(){
         browser.waitUntil(() => {
         return this.locator.isExisting();
-        }, 3000, 'TextTopics is not isExisting();');
+        }, 3000, 'ButDelRepoFinal is not displayed');
 
     }
 
@@ -43,10 +43,12 @@ class TextTopics {
         this.locator.moveTo()
         
     }
-  
+    Scroll() {
+        this.locator.scrollIntoView();
+    }
 
     
  
 }
 
-module.exports = new TextTopics()
+module.exports = new ButDelRepoFinal()

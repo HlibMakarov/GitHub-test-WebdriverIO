@@ -1,19 +1,19 @@
-class TextTopics {
+class ButtonTypescript {
 
     get locator() {
-        return $('//h1[text()="Topics"]')
+        return $('.filter-list > li:nth-child(10) > a:nth-child(2)')
     }
     isDisplayed () {
         this.locator.isDisplayed();
-        console.log("IS DISPLAYED TextTopics?: " + this.locator.isDisplayed()) //outputs: true
+        console.log("IS DISPLAYED ButtonTypescript?: " + this.locator.isDisplayed()) //outputs: true
     }
     Clickable() {
         this.locator.isClickable();
-        console.log("IS CLICKABLE TextTopics?: "+ this.locator.isClickable())  //outputs: true!
+        console.log("IS CLICKABLE ButtonTypescript?: "+ this.locator.isClickable())  //outputs: true!
     }
     Enable (){
         this.locator.isEnabled();
-        console.log("isEnabled TextTopics:" + this.locator.isEnabled()); // output: true
+        console.log("isEnabled ButtonTypescript:" + this.locator.isEnabled()); // output: true
     }
     Click () {
         this.locator.click();
@@ -22,7 +22,7 @@ class TextTopics {
     Wait(){
         browser.waitUntil(() => {
         return this.locator.isExisting();
-        }, 3000, 'TextTopics is not isExisting();');
+        }, 3000, 'ButtonTypescript is not displayed');
 
     }
 
@@ -49,4 +49,4 @@ class TextTopics {
  
 }
 
-module.exports = new TextTopics()
+module.exports = new ButtonTypescript()

@@ -21,7 +21,7 @@ class Explore {
 
     Wait(){
         browser.waitUntil(() => {
-        return this.locator.isDisplayed();
+        return this.locator.isExisting();
         }, 3000, 'Explore is not displayed');
 
     }
