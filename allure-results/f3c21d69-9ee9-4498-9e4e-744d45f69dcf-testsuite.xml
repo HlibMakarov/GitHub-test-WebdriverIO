@@ -1,0 +1,77 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1589757054905' stop='1589757056558'>
+    <name>Testcase #3 full dropdownlist: Cycle #2 test Repository link</name>
+    <title>Testcase #3 full dropdownlist: Cycle #2 test Repository link</title>
+    <test-cases>
+        <test-case start='1589757054905' status='passed' stop='1589757055198'>
+            <name>Open profile list</name>
+            <title>Open profile list</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1589757055199' status='passed' stop='1589757055299'>
+            <name> is Displayed? Your Reposytory button </name>
+            <title> is Displayed? Your Reposytory button </title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1589757055300' status='passed' stop='1589757055421'>
+            <name>Clickable? Your Reposytory button</name>
+            <title>Clickable? Your Reposytory button</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1589757055421' status='passed' stop='1589757055499'>
+            <name>Enable? Your Reposytory button</name>
+            <title>Enable? Your Reposytory button</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1589757055500' status='passed' stop='1589757056558'>
+            <name>Click Your Reposytory button</name>
+            <title>Click Your Reposytory button</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

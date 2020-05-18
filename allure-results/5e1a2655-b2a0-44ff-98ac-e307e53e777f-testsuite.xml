@@ -1,0 +1,45 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1589757124125' stop='1589757127641'>
+    <name>Testcase #8 Spec search: Explore github</name>
+    <title>Testcase #8 Spec search: Explore github</title>
+    <test-cases>
+        <test-case start='1589757124125' status='pending' stop='1589757124125'>
+            <name>open url</name>
+            <title>open url</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Test ignored</message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1589757124126' status='pending' stop='1589757124126'>
+            <name>spec Topics</name>
+            <title>spec Topics</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Test ignored</message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1589757124126' status='passed' stop='1589757127640'>
+            <name>spec Search</name>
+            <title>spec Search</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

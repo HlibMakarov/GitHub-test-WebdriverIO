@@ -1,0 +1,49 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1589757107770' stop='1589757109940'>
+    <name>Testcase #4 Forgot Password: Forgot Password value "aa@@google.com"</name>
+    <title>Testcase #4 Forgot Password: Forgot Password value "aa@@google.com"</title>
+    <test-cases>
+        <test-case start='1589757107770' status='passed' stop='1589757108368'>
+            <name>open url</name>
+            <title>open url</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1589757108368' status='passed' stop='1589757108827'>
+            <name>Click SignIn</name>
+            <title>Click SignIn</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1589757108827' status='passed' stop='1589757109940'>
+            <name>Forgot pass Neg "aa@@google.com" </name>
+            <title>Forgot pass Neg "aa@@google.com" </title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

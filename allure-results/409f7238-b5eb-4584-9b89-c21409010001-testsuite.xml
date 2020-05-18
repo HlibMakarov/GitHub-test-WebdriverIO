@@ -1,0 +1,77 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1589757057992' stop='1589757059530'>
+    <name>Testcase #3 full dropdownlist: Cycle #4 test YourStarts link</name>
+    <title>Testcase #3 full dropdownlist: Cycle #4 test YourStarts link</title>
+    <test-cases>
+        <test-case start='1589757057992' status='passed' stop='1589757058221'>
+            <name>Open profile list</name>
+            <title>Open profile list</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1589757058221' status='passed' stop='1589757058377'>
+            <name> is Displayed? YourStarts button </name>
+            <title> is Displayed? YourStarts button </title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1589757058377' status='passed' stop='1589757058495'>
+            <name>Clickable? YourStarts button</name>
+            <title>Clickable? YourStarts button</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1589757058495' status='passed' stop='1589757058574'>
+            <name>Enable? YourStarts button</name>
+            <title>Enable? YourStarts button</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1589757058575' status='passed' stop='1589757059530'>
+            <name>Click YourStarts button</name>
+            <title>Click YourStarts button</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

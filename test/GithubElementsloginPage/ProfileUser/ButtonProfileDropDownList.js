@@ -9,7 +9,7 @@ class ButtonProfileDropList {
 
     Wait(){
         browser.waitUntil(() => {
-        return this.locator.isDisplayed();
+        return this.locator.isExisting();
         }, 3000, 'ButtonProfileDropList is not displayed');
 
     }

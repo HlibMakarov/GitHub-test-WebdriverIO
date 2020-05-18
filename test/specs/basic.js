@@ -1111,3 +1111,25 @@ describe('Testcase #10 Carriers', () => {
         GetPositionsText.GetTextConsole()
     });
 })
+
+describe('Testcase #11 Method#2 Carriers', () => {
+    it('open url', () => {
+        browser.setWindowSize(1920, 1080)
+        browser.url('https://github.com/')
+    })
+    it('Carriers', () => {
+        Carriers.Wait()
+        Carriers.Scroll()
+        Carriers.Click()
+        OpenPositions.Scroll()
+        OpenPositions.Wait()
+        OpenPositions.Click()
+    })
+
+
+    it('get content from table cell', () => {
+    
+    const linka = $$('[class="pb-md-6"]')
+    linka.forEach(linka => console.log(linka.getText()))
+    });
+})
